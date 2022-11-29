@@ -50,8 +50,10 @@ function Home() {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-      }).then((res) => res.json());
-      window.location.reload()
+      }).then((res) => {
+        res.json()
+        window.location.reload()
+      });
     } else {
       alert("Please enter details");
     }
