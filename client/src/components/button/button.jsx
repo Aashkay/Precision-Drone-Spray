@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Button } from '@mui/material';
-import { SxProps } from '@mui/system';
 
 const root = {
 	borderRadius: '8px',

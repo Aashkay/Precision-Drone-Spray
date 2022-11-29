@@ -5,6 +5,7 @@ import PrimaryInput from "../../components/input/input";
 import cottonField from "../../CottonField.jpg";
 import { PrimaryButton } from "../../components/button/button";
 import CoordinatesList from "./CoordinatesList";
+import  { hostUrl } from '../../constants';
 
 function Home() {
   const [longitude, setLongitude] = useState(null);
@@ -14,7 +15,8 @@ function Home() {
   useEffect(() => getCoordinates(), []);
 
   const getCoordinates = () => {
-    fetch("/getCoordinates", {
+
+    fetch(`${hostUrl}/getCoordinates`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -41,7 +43,7 @@ function Home() {
       long: longitude,
     };
     if (longitude && latitude) {
-      fetch("/updateCoordinates", {
+      fetch(`${hostUrl}/updateCoordinates`, {
         method: "POST",
         body: JSON.stringify({ coordinates: coordinates }),
         headers: {
