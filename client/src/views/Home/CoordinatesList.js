@@ -26,7 +26,7 @@ export default function InteractiveList({ coordinates }) {
     const longitude = coordinatesItem.long;
     const latitude = coordinatesItem.lat;
     if (longitude && latitude) {
-      fetch(`${hostUrl}/getCoordinates`, {
+      fetch(`${hostUrl}/deleteCoordinates`, {
         method: "POST",
         body: JSON.stringify({ coordinates: coordinatesItem }),
         headers: {
