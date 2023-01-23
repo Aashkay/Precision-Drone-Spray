@@ -191,6 +191,9 @@ nav .fa {
     display: none;
     transition: display 0.5s;
   }
+  .pop-over {
+    max-width: 95% !important;
+  }
 }
 
 /* Meet the team */
@@ -415,7 +418,6 @@ h3 {
 
 .banner {
   background-color: rgba(108, 122, 137, 0.20);
-  color: #fff;
   padding: 12px 34px;
   text-align: center;
   font-size: 17px; 
@@ -425,7 +427,17 @@ h3 {
   width: 80%;
   box-sizing: border-box;
   border: 1px solid #AAFF00;
-}  
+}
+
+.dot {
+  color: #81B622 !important;
+  background-color:  rgba(129, 182, 34, 0.6) !important;
+}
+
+.banner p {
+  /* color: rgb(0, 0, 0); */
+  font-weight: 400;
+}
 
 #Subtext {
   padding-top: 0px;
