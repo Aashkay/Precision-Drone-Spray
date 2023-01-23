@@ -194,6 +194,9 @@ nav .fa {
   .pop-over {
     max-width: 95% !important;
   }
+  .text-box-sub{
+    bottom: 40%;
+  }
 }
 
 /* Meet the team */
