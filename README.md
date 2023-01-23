@@ -1,2 +1,2 @@
 # Precision-Drone-Spray
-Senior Design Project 
+Senior Design Project
