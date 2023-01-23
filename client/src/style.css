@@ -99,6 +99,10 @@ nav img {
   text-align: center;
 }
 
+/* .comp-vis {
+  bottom: 40%;
+} */
+
 .text-box h1 {
   font-size: 70px;
 }
@@ -196,6 +200,9 @@ nav .fa {
   }
   .text-box-sub{
     bottom: 40%;
+  }
+  .comp-vis {
+    bottom: 60%;
   }
 }
 

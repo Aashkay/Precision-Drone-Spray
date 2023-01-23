@@ -42,7 +42,7 @@ const Team = () => {
             </div>
             <i className="fa fa-bars" onClick={handleShowMenu}></i>
           </nav>
-          <div className="text-box-sub">
+          <div className="text-box-sub comp-vis">
             <h1 className="animate__animated animate__fadeInUp">Project Team</h1>
             <br />
           </div>
