@@ -80,17 +80,25 @@ const Frontpage = () => {
               <div className='cv-col'>
                 <h2>Timeline</h2>
                 <p>This project is part of the courses ECEN 403/404, spanning across both semesters. The Precision Drone Spray project was done during the fall semester of 2022 and the spring semester of 2023.</p>
+                <OppositeContentTimeline />
               </div>
             </div>
             <hr />
             <div className="left-row">
               <div className="cv-col">
                 <h2>Testing</h2>
-                <p>Add more about the timeline of the project. Where are we testing it? What is the crop field and weeds we're testing on? <br />
+                <p>Where are we testing it? What is the crop field and weeds we're testing on? <br />
                 Was thinking about adding the nav links as banners of some sort across the page perhaps.</p>
               </div>
             </div>
-            {/* <hr /> */}
+            <hr />
+            <div className="left-row">
+              <div className="cv-col">
+                <h2>Contact Us</h2>
+                <p>Add a form that will send an email automatically to PrecisionDroneSpray@gmail.com</p>
+              </div>
+            </div>
+            <hr />
             <div className="cent-row">
                 <h2 className="animate__animated animate__pulse">Check out the project GitHub!</h2>
                 <div className="git">

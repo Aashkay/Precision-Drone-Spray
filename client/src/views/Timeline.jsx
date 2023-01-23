@@ -6,6 +6,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import '../style.css';
 
 export default function OppositeContentTimeline() {
   return (
@@ -15,8 +16,8 @@ export default function OppositeContentTimeline() {
           ECEN 403
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
+          <TimelineDot className='dot'/>
+          <TimelineConnector className='dot' />
         </TimelineSeparator>
         <TimelineContent>Fall 2022</TimelineContent>
       </TimelineItem>
@@ -25,7 +26,7 @@ export default function OppositeContentTimeline() {
           Spring 2023
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot className='dot'/>
           {/* <TimelineConnector /> */}
         </TimelineSeparator>
         <TimelineContent color="text.secondary">ECEN 404</TimelineContent>
