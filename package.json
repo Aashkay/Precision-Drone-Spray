@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/lab": "^5.0.0-alpha.116",
+    "@mui/material": "^5.11.5",
+    "animate.css": "^4.1.1",
+    "jss": "^10.9.2",
+    "jss-preset-default": "^10.9.2",
+    "react-animations": "^1.0.0",
+    "react-router-dom": "^6.7.0",
+    "react-simple-popover": "^0.2.4"
+  }
+}

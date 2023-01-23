@@ -15,12 +15,14 @@ const Demo = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
 }));
 
+
+//this function displays the table with the ability to delete parts of the table
 export default function InteractiveList({ coordinates }) {
   // eslint-disable-next-line
   const [dense, setDense] = React.useState(false);
   // eslint-disable-next-line
   const [secondary, setSecondary] = React.useState(false);
-
+  //this is the delete button that has the trash can symbol
   const handleDelete = (coordinatesItem) => {
     console.log(coordinatesItem)
     const longitude = coordinatesItem.long;
@@ -42,7 +44,7 @@ export default function InteractiveList({ coordinates }) {
       alert("Please enter details");
     }
   };
-
+//returns the actual table wiht the list
   return (
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
       <Grid container spacing={2}>
