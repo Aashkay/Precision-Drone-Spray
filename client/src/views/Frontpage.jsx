@@ -95,7 +95,7 @@ const Frontpage = () => {
             <div className="left-row">
               <div className="cv-col">
                 <h2>Contact Us</h2>
-                <p>Add a form that will send an email automatically to PrecisionDroneSpray@gmail.com</p>
+                <p>Add a form that will send an email automatically to <br />PrecisionDroneSpray@gmail.com</p>
               </div>
             </div>
             <hr />
