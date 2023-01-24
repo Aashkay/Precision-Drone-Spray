@@ -1,4 +1,3 @@
-import './App.css';
 import Home3 from './views/Home3/Home3';
 
 import React from 'react';

@@ -569,10 +569,10 @@ h3 {
   /* padding-bottom: 3vh; */
   margin-top: 3vh;
   margin-bottom: 3vh;
-  max-width: 80%;
+  max-width: 95%;
   height: auto;
   margin: auto;
   display: block;
-  border: 10px solid black;
+  border: 3px solid black;
   box-sizing: border-box;
 }
