@@ -100,8 +100,8 @@ function Home3() {
           <i className="fa fa-bars" onClick={handleShowMenu}></i>
         </nav>
         <div className="text-box-sub">
-          <h1 class="animate__animated animate__fadeInUp">User Interface</h1>
-          <h2 class="animate__animated animate__fadeInUp">Manage Options for Spraying</h2>
+          <h1 className="animate__animated animate__fadeInUp">User Interface</h1>
+          <h2 className="animate__animated animate__fadeInUp">Manage Options for Spraying</h2>
         </div>
 
       </section>
@@ -118,69 +118,66 @@ function Home3() {
             </div>
           </div>
 
-          </section>
-          
+          <div>
+            {/* <Canvas /> */}
+            <header>
+              {/*<p>MAP</p>
+              <p><Link to="/">Home</Link> <Link to="/about">About</Link> <Link to="/map">Map</Link></p> */}
+            </header>{/*displays image of field will need to change when image is located on database */}
+            <img src={cottonField} alt="Cotton Field" width="100%" height="100%" id="field"/>
+            <Grid 
+              alignItems="start"
+              justifyContent="center"
+              container
+              sx={{ minHeight: "40vh" }}
+            >
+              <Grid item xs={12} sm={12} md={6}>
+                {/* <Grid>
+                  <p variant="h5" noWrap component="a" href="">
+                    Add Coordinates
+                  </p>
+                </Grid> */}
+                <Box pt={3} sx={{ width: "100%" }}>
+                  <Grid pt={3} item>
+                    <PrimaryInput
+                      label={"Latitude"}
+                      type={"number"}
+                      name="latitude"
+                      fullWidth
+                      placeholder={"Latitude"}
+                      value={latitude}
+                      onChange={handleChangeLatitude}
+                    />
+                  </Grid>
 
+                  <Grid pt={3} item>
+                    <PrimaryInput
+                      label={"Longitude"}
+                      type={"number"}
+                      name="longitude"
+                      fullWidth
+                      placeholder={"Longitude"}
+                      value={longitude}
+                      onChange={handleChangeLongitude}
+                    />
+                  </Grid>
+                </Box>
 
-      <div>
-      {/* <Canvas /> */}
-      <header>
-        {/*<p>MAP</p>
-        <p><Link to="/">Home</Link> <Link to="/about">About</Link> <Link to="/map">Map</Link></p> */}
-      </header>{/*displays image of field will need to change when image is located on database */}
-      <img src={cottonField} alt="CottonMap" width="100%" height="100%" />
-      <Grid 
-        alignItems="start"
-        justifyContent="center"
-        container
-        sx={{ minHeight: "100vh" }}
-      >
-        <Grid item xs={12} sm={12} md={6}>
-          <Grid>
-            <p variant="h5" noWrap component="a" href="">
-              Add Coordinates
-            </p>
-          </Grid>
-          <Box pt={3} sx={{ width: "100%" }}>
-            <Grid pt={3} item>
-              <PrimaryInput
-                label={"Latitude"}
-                type={"number"}
-                name="latitude"
-                fullWidth
-                placeholder={"Latitude"}
-                value={latitude}
-                onChange={handleChangeLatitude}
-              />
+                <Grid item xs={12} sx={{ paddingTop: 2 }}>
+                  <PrimaryButton variant="contained" onClick={handleSubmit} fullWidth>
+                    {"Add Coordinates"}{/*shows textbox that allows user to input coordiantes */}
+                  </PrimaryButton>
+                </Grid>
+              </Grid>
+              <CoordinatesList coordinates={coordinates} />
             </Grid>
-
-            <Grid pt={3} item>
-              <PrimaryInput
-                label={"Longitude"}
-                type={"number"}
-                name="longitude"
-                fullWidth
-                placeholder={"Longitude"}
-                value={longitude}
-                onChange={handleChangeLongitude}
-              />
-            </Grid>
-          </Box>
-
-          <Grid item xs={12} sx={{ paddingTop: 2 }}>
-            <PrimaryButton variant="contained" onClick={handleSubmit} fullWidth>
-              {"Add Coordinates"}{/*shows textbox that allows user to input coordiantes */}
-            </PrimaryButton>
-          </Grid>
-        </Grid>
-        <CoordinatesList coordinates={coordinates} />
-      </Grid>
-    </div>
-    </div>
-    <section className="footer">
-      <h4>About Us</h4>
-      <p>Undergraduate Senior Design Project for the <br /> Electrical and Computer Engineering Department at Texas A&M University</p>
-      <Link to="/" onClick={scrollToTop}><img src={PDSLogo} alt="PDS Logo" /></Link>
+          </div>
+        </section>
+      </div>
+      <section className="footer">
+        <h4>About Us</h4>
+        <p>Undergraduate Senior Design Project for the <br /> Electrical and Computer Engineering Department at Texas A&M University</p>
+        <Link to="/" onClick={scrollToTop}><img src={PDSLogo} alt="PDS Logo" /></Link>
       </section>
     </React.Fragment>
     
