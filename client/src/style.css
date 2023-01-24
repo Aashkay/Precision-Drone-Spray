@@ -250,11 +250,15 @@ p {
 
 #projImg {
   /* padding-left: 10%; */
-  margin-left: 10%;
+  /* margin-left: 20%; */
   margin-right: 0 !important;
   padding-right: 0 !important;
   display: flex;
   align-items: center;
+}
+
+#projImg img {
+  width: 100%;
 }
 
 .left-row {
