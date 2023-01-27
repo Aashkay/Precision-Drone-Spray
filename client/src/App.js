@@ -1,5 +1,3 @@
-import Home3 from './views/Home3/Home3';
-
 import React from 'react';
 import './style.css';
 // importing components from react-router-dom package
@@ -14,7 +12,7 @@ import {
 import Frontpage from './views/Frontpage';
 import Team from './views/Team';
 import ComputerVision from './views/ComputerVision';
-//import UserInterface from './views/UserInterface';
+import UserInterface from './views/UserInterface';
 
 function App() {
   return (
@@ -43,7 +41,7 @@ function App() {
           {/* This route is for userinterface component
           with exact path "/userinterface", in 
           component props we passes the imported component*/}
-          <Route path='/userinterface' element={<Home3 />} />
+          <Route path='/userinterface' element={<UserInterface />} />
             
           {/* If any route mismatches the upper 
           route endpoints then, redirect triggers 

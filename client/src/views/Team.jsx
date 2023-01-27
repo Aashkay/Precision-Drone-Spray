@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import PDSLogo from '../images/PDSLogo.png'
 import Martin_Profile from '../images/Martin_Profile.jpg'
 import Aashay_Profile from '../images/Aashay_Profile.jpg'
@@ -13,25 +13,26 @@ import { Link } from "react-router-dom";
   
 const Team = () => {
     const [showMenu, setShowMenu] = useState(false)
-  
-    const navLinks = document.getElementById("navLinks")
-  
+
+    const navLinksRef = useRef(null)
+
     function handleShowMenu() {
-      setShowMenu(true)
-      navLinks.style.display = "block"
+        setShowMenu(true)
+        navLinksRef.current.style.display = "block"
     }
-  
+
     function handleHideMenu() {
-      setShowMenu(false)
-      navLinks.style.display = "none"
+        setShowMenu(false)
+        navLinksRef.current.style.display = "none"
     }
+    
     function scrollToTop() { window.scrollTo(0, 0) }
     return (
       <React.Fragment>
         <section className="sub-header">
           <nav>
             <Link to="/" onClick={scrollToTop}><img src={PDSLogo} alt="PDS Logo" /></Link>
-            <div className="nav-links" id="navLinks">
+            <div className="nav-links" ref={navLinksRef} id="navLinks">
               <i className="fa fa-times" onClick={handleHideMenu}></i>
               <ul>
                 <li><Link to="/" onClick={scrollToTop}>HOME</Link></li>

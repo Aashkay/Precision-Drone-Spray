@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import PDSLogo from '../images/PDSLogo.png'
 import AM_Logo from '../images/AM_Logo.jpg'
 import ProjectConecptImage from '../images/ProjectConecptImage.jpg'
@@ -12,16 +12,16 @@ import OppositeContentTimeline from "./Timeline";
 const Frontpage = () => {
   const [showMenu, setShowMenu] = useState(false)
 
-  const navLinks = document.getElementById("navLinks")
+  const navLinksRef = useRef(null)
 
   function handleShowMenu() {
-    setShowMenu(true)
-    navLinks.style.display = "block"
+      setShowMenu(true)
+      navLinksRef.current.style.display = "block"
   }
 
   function handleHideMenu() {
-    setShowMenu(false)
-    navLinks.style.display = "none"
+      setShowMenu(false)
+      navLinksRef.current.style.display = "none"
   }
 
   function scrollToTop() { window.scrollTo(0, 0) }
@@ -30,14 +30,14 @@ const Frontpage = () => {
         <section className="header">
           <nav>
             <Link to="/" onClick={scrollToTop}><img src={PDSLogo} alt="PDS Logo" /></Link>
-            <div className="nav-links" id="navLinks">
-            <i className="fa fa-times" onClick={handleHideMenu}></i>
-            <ul>
-              <li className="active"><Link to="/" onClick={scrollToTop}>HOME</Link></li>
-              <li><Link to="/team" onClick={scrollToTop}>TEAM</Link></li>
-              <li><Link to="/computervision" onClick={scrollToTop}>COMPUTER VISION</Link></li>
-              <li><Link to="/userinterface" onClick={scrollToTop}>USER INTERFACE</Link></li>
-            </ul>
+            <div className="nav-links" ref={navLinksRef} id="navLinks">
+              <i className="fa fa-times" onClick={handleHideMenu}></i>
+              <ul>
+                <li className="active"><Link to="/" onClick={scrollToTop}>HOME</Link></li>
+                <li><Link to="/team" onClick={scrollToTop}>TEAM</Link></li>
+                <li><Link to="/computervision" onClick={scrollToTop}>COMPUTER VISION</Link></li>
+                <li><Link to="/userinterface" onClick={scrollToTop}>USER INTERFACE</Link></li>
+              </ul>
             </div>
             <i className="fa fa-bars" onClick={handleShowMenu}></i>
           </nav>
