@@ -18,16 +18,16 @@ import BasicPopover from "./Popover";
 const ComputerVision = () => {
   const [showMenu, setShowMenu] = useState(false)
 
-  const navLinks = document.getElementById("navLinks")
+  const navLinksRef = useRef(null)
 
   function handleShowMenu() {
-    setShowMenu(true)
-    navLinks.style.display = "block"
+      setShowMenu(true)
+      navLinksRef.current.style.display = "block"
   }
 
   function handleHideMenu() {
-    setShowMenu(false)
-    navLinks.style.display = "none"
+      setShowMenu(false)
+      navLinksRef.current.style.display = "none"
   }
 
   function scrollToTop() { window.scrollTo(0, 0) }
@@ -37,7 +37,7 @@ const ComputerVision = () => {
       <section className="sub-header">
         <nav>
           <Link to="/" onClick={scrollToTop}><img src={PDSLogo} alt="PDS Logo" /></Link>
-          <div className="nav-links" id="navLinks">
+          <div className="nav-links" ref={navLinksRef} id="navLinks">
           <i className="fa fa-times" onClick={handleHideMenu}></i>
           <ul>
             <li><Link to="/" onClick={scrollToTop}>HOME</Link></li>
@@ -97,7 +97,9 @@ const ComputerVision = () => {
               <img src={CurrentModelmAP2} alt="Current model built on top first model" className="large-image"/>
             </div>
           </div>
-          <p className="acenter"><BasicPopover /></p>
+          <div className="acenter">
+            <BasicPopover />
+          </div>
           <div className="row">
             <div className="cv-col">
               <p>The figure to the left shows a model trained from pretrained weights that are auto-downloaded from the latest YOLOv5 release of Ultralytics and used as the starting point for training a new model. After this model was trained and new weights were created, the new weights were used as a base to train the next model. This allows the new model to improve on previous knowledge and results in a more accurate model. After the new model is trained, the newly created weights are used as the starting point for training the next model, allowing for continuous improvement over time.</p>
