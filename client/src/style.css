@@ -14,7 +14,7 @@
   background-image: linear-gradient(rgba(4, 9, 30, 0.55), rgba(4, 9, 30, 0.55)), url(images/Cropfield.jpg);
   background-position: center;
   background-size: cover;
-  position: relative;
+  /* position: relative; */
 }
 
 nav {
