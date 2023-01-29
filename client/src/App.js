@@ -46,7 +46,7 @@ function App() {
           {/* If any route mismatches the upper 
           route endpoints then, redirect triggers 
           and redirects app to home component with to="/" */}
-          <Route path="../" element={<Navigate replace to="/" />} />
+          <Route path="/" element={<Navigate replace to="/" />} />
         </Routes>
       </Router>
     </>
