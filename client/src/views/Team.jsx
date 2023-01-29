@@ -53,6 +53,13 @@ const Team = () => {
             <section className="team">
                 <h2>Undergraduate Students</h2>
                 <div className="row">
+                <div className="team-col">
+                    <h3>Aashay Kadakia</h3>
+                    <img src={Aashay_Profile} alt="Aashay's Profile Pic" className="profpic" />
+                    <h4>Website and Database Lead</h4>
+                    {/* <p>Pursuing a degree in Electrical and Computer Engineering Major with a minor in Engineering Project Management.</p> */}
+                    <a href="https://www.linkedin.com/in/aashaykadakia/" target="_blank" rel="noreferrer"><i className="fa fa-linkedin-square"></i></a>
+                    </div>
                     <div className="team-col">
                     <h3>Martin Wnorowski</h3>
                     <img src={Martin_Profile} alt="Martin's Profile Pic" className="profpic" />
@@ -60,13 +67,7 @@ const Team = () => {
                     {/* <p>Pursuing a B.S. degree in Electrical and Computer Engineering with a minor in Engineering Project Management.</p> */}
                     <a href="https://www.linkedin.com/in/martin-wnorowski/" target="_blank" rel="noreferrer"><i className="fa fa-linkedin-square"></i></a>
                     </div>
-                    <div className="team-col">
-                    <h3>Aashay Kadakia</h3>
-                    <img src={Aashay_Profile} alt="Aashay's Profile Pic" className="profpic" />
-                    <h4>Website and Database Lead</h4>
-                    {/* <p>Pursuing a degree in Electrical and Computer Engineering Major with a minor in Engineering Project Management.</p> */}
-                    <a href="https://www.linkedin.com/in/aashaykadakia/" target="_blank" rel="noreferrer"><i className="fa fa-linkedin-square"></i></a>
-                    </div>
+                    
                 </div>
 
                 <h2>Teaching Assistant</h2>
