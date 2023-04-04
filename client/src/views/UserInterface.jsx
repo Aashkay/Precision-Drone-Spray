@@ -3,6 +3,7 @@ import { Typography, Grid, Box } from "@mui/material";
 import PrimaryInput from "../components/input/input";
 //import Canvas from "./Canvas";
 import cottonField from "../images/CottonFieldImage.jpg";
+import testField from "../images/droneGrid.png";
 import { PrimaryButton } from "../components/button/button";
 import CoordinatesList from "./CoordinatesList";
 import  { hostUrl } from '../constants';
@@ -124,7 +125,7 @@ function UserInterface() {
               {/*<p>MAP</p>
               <p><Link to="/">Home</Link> <Link to="/about">About</Link> <Link to="/map">Map</Link></p> */}
             </header>{/*displays image of field will need to change when image is located on database */}
-            <img src={cottonField} alt="Cotton Field" width="100%" height="100%" id="field"/>
+            <img src={testField} alt="Cotton Field" width="100%" height="100%" id="field"/>
             <Grid 
               alignItems="start"
               justifyContent="center"
